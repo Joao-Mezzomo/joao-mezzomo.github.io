@@ -1,0 +1,30 @@
+function rolarDado(lados = 20, idResultado = "resultadoDado") {
+  const display = document.getElementById(idResultado);
+  let contador = 0;
+  display.style.textShadow = "0 0 5px var(--accent)"; // animação inicial
+
+  const intervalo = setInterval(() => {
+    display.innerText = Math.floor(Math.random() * lados) + 1;
+    contador++;
+    if (contador > 8) {
+      clearInterval(intervalo);
+      const valor = Math.floor(Math.random() * lados) + 1;
+
+      let resultadoFinal = `🎲 ${valor}`;
+      if (lados === 20 && valor === 20) resultadoFinal = "🎉 20! Acerto Crítico!";
+      if (lados === 20 && valor === 1) resultadoFinal = "💀 1! Falha Crítica!";
+      if (lados === 6 && valor === 6) resultadoFinal = "🎉 6! Acerto Crítico!";
+      if (lados === 6 && valor === 1) resultadoFinal = "💀 1! Falha Crítica!";
+      if (lados === 100 && valor === 100) resultadoFinal = "🎉100! Acerto Crítico!";
+      if (lados === 100 && valor === 1) resultadoFinal = "💀 1! Falha Crítica!";
+
+      display.innerText = resultadoFinal;
+      display.style.animation = "dadoGlow 0.5s ease";
+    }
+  }, 80);
+}
+
+// DADOS ESPECÍFICOS
+function rolarD20() { rolarDado(20); }
+function rolarD6() { rolarDado(6); }
+function rolarD100() { rolarDado(100); }
