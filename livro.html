@@ -10,14 +10,20 @@
 
   <div class="sidebar">
     <h1>JUJUTSU RPG</h1>
-    <a href="index.html">📖 História</a>
-    <a href="fichas.html">🎭 Fichas</a>
-    <a href="livro.html" class="active">📚 Livro</a>
-    <a href="npcs.html">👥 NPCs</a>
+    <nav>
+      <a href="index.html">📖 História</a>
+      <a href="fichas.html">🎭 Fichas</a>
+      <a href="livro.html" class="active">📚 Livro</a>
+      <a href="npcs.html">👥 NPCs</a>
+      <a href="sobre.html">ℹ️ Sobre</a>
+    </nav>
   </div>
+
 
   <div class="content">
     <h2>📚 Livro do RPG</h2>
+
+
 
     <div class="card">
       <h3>Regras Básicas</h3>
@@ -30,12 +36,17 @@
     </div>
     
     <div class="card">
-      <h3>Roll de Dados</h3>
-      <p>Clique aqui para ser direcionado ao nosso sistema de rolagem de dados para testes, ações e afins!</p>
+      <h3>🎲 Rolagem de Dados</h3>
+      <button class="btn-outline" onclick="rolarD6()">Rolar D6</button>
+      <button class="btn-outline" onclick="rolarD20()">Rolar D20</button>
+      <button class="btn-outline" onclick="rolarD100()">Rolar D100</button>
+      <p id="resultadoDado" style="margin-top:10px;font-size:18px;font-weight:bold;"></p>
     </div>
-    
+
     <footer>© 2025 Jujutsu RPG — Portal da Campanha</footer>
   </div>
 
+  <!-- Importa funções do sistema de dados -->
+  <script src="js/dados.js"></script>
 </body>
 </html>
