@@ -368,3 +368,73 @@
       flex-direction: column;
     }
   }
+@keyframes dadoGlow {
+  from {
+    text-shadow: 0 0 5px var(--accent);
+    transform: scale(1.1);
+  }
+  to {
+    text-shadow: 0 0 15px var(--accent-light);
+    transform: scale(1);
+  }
+}
+
+#resultadoDado {
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--accent-light);
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px var(--accent);
+  transition: 0.3s ease;
+}
+.btn, .btn-outline {
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 5px;
+  transition: var(--transition);
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  box-shadow: 0 0 10px rgba(107,0,255,0.3);
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px rgba(107,0,255,0.6);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent-light);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.sobre-lista {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+.sobre-lista li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--accent);
+  color: var(--text-light);
+  line-height: 1.5;
+  transition: var(--transition);
+}
+
+.sobre-lista li:hover {
+  border-left-color: var(--accent-light);
+  color: var(--accent-light);
+}
